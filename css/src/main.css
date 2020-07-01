@@ -1,0 +1,23 @@
+/* main.css */
+
+#wrap{
+  width:100%; height:auto;
+  min-height: 1500px;
+}
+
+#headBox{
+  position:fixed; top:0; left:0;
+  width:100%; height:100px;
+  background-color: #fff;
+  box-shadow: 0.1rem 0.3rem 0.4rem rgba(5,5,5,0.5);
+}
+
+#viewBox{
+  width:100%; height:1000px;
+  background-color: #ccc;
+}
+
+#infoBox{
+  width:100%; height:800px;
+  background-color: #a7a;
+}
