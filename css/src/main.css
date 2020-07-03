@@ -1,23 +1,416 @@
 /* main.css */
 
+
 #wrap{
   width:100%; height:auto;
   min-height: 1500px;
 }
 
+html {scroll-behavior: smooth;}
+body {font-family: 'NanumSquare';}
+a {display:block; width: 100%; height:100%;}
+
+/* ======================================= */
 #headBox{
-  position:fixed; top:0; left:0;
+  position:fixed; top:0; left:0; z-index:10000;
   width:100%; height:100px;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
   box-shadow: 0.1rem 0.3rem 0.4rem rgba(5,5,5,0.5);
 }
 
-#viewBox{
-  width:100%; height:1000px;
-  background-color: #ccc;
+#gnb{
+  width:100%; height:100%;
 }
 
+#gnb ul{
+  width:100%; height:100%;
+}
+
+#gnb li{
+  float:left; margin-left: 50px;
+  line-height: 100px;
+  font-size: 1.2rem;
+}
+
+
+/* ======================================= */
+#viewBox{
+  width:100%; height:1000px;
+  background-image: url(../../img/viewBox_bg.JPG);
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+  background-size: cover;
+}
+
+.view_text{
+  position: relative;
+  float:right; 
+  top:50%; right:5%;
+  width:500px;
+  font-size:1.5rem;
+}
+
+.view_text .item {
+  visibility: hidden;
+  display: none;
+}
+
+.view_text > div {
+  min-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  color: orange;
+}
+
+.view_text > div:after {
+  content: " ";
+  width: 10px;
+  height: 4px;
+  display: block;
+  background: black;
+  color: orange;
+  margin-bottom: 4px;
+  margin-left: 2px;
+  animation-duration: 350ms;
+  animation-name: fade;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.typing-txt{
+  display:none;
+}
+
+.mouse{
+  position: absolute; z-index:100;
+  bottom:0; left:50%; transform: translateX(-50%);
+  width: 100px; height: 150px;
+  background-image: url(../../img/mouse.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  animation:mvScroll 2s infinite ease alternate;
+}
+
+@keyframes mvScroll {
+  0%{background-position-y: 0;}
+  100%{background-position-y: -3rem;}
+}
+
+/* ======================================= */
 #infoBox{
+  position: relative;
+  width:100%; height:950px;
+  padding:20px; box-sizing: border-box;
+  background-color: #eff2f7;
+}
+
+#infoBox h2{
+  position: absolute; z-index:100;
+  top:150px;
+  width:100%; height:10px;
+  font-size:7rem; 
+  color:#eee;
+  text-shadow: 0.2rem 0.2rem 0.5rem #777;
+}
+
+.info_title_box{
+  position: relative; z-index:50;
+  top:15%; left:2%;
+  width:40%; height:100px;
+  background-image:linear-gradient(90deg, #3494E6, #EC6EAD);
+}
+
+.info_area{
+  margin-top: 200px;
+  padding:80px 100px; box-sizing: border-box;
   width:100%; height:800px;
-  background-color: #a7a;
+}
+
+.picture{
+  float:left;
+  width:500px; height:500px;
+  margin-left: 150px;
+  border-radius: 100%;
+  box-shadow: 1rem 1rem 1rem #ccc;
+  background-image: url(../../img/me.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  background-size: contain;
+}
+
+.info_txt{
+  float:right; 
+  width:700px; height:500px;
+}
+
+.info_txt > h3{
+  margin-top: 50px;
+}
+
+.info_txt > p{
+  margin-top: 10px;
+}
+/* ======================================= */
+#skillBox{
+  width:100%; height:300px;
+  background-color: #425067;
+}
+
+#skillBox ul{
+  width:100%; height:100%;
+  padding:50px; box-sizing: border-box;
+}
+
+#skillBox li{
+  float:left;
+  width:10%; height:160px;
+  margin-left: 50px;
+}
+
+#skillBox li:first-child{margin-left: 100px;
+}
+
+#skillBox dl{
+  width:100%; height:100%;
+}
+
+#skillBox dt{
+  width:100%; height:20px;
+  text-align: center;
+  color:#fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#skillBox dd{
+  display:inline-block;
+  width:160px; height:160px; 
+  border-radius: 100%; 
+  border: 10px solid rgba(255,255,255,.3);
+  text-align: center;
+  line-height: 160px;
+  color:#fff;
+  font-size:1.2rem;
+}
+
+#skillBox dd > span{display:block; position: absolute; z-index:500;}
+
+.skill_dd_01{left:220px;}
+.skill_dd_02{left:440px;}
+.skill_dd_03{left:656px;}
+.skill_dd_04{left:875px;}
+.skill_dd_05{left:1095px;}
+.skill_dd_06{left:1310px;}
+.skill_dd_07{left:1528px;}
+
+/* ======================================= */
+.circle_01, .circle_02, .circle_03, .circle_04, .circle_05, .circle_06, .circle_07{
+  position: relative; width: 160px; height: 160px;
+}
+
+.arc_q {
+  position: absolute; top: 0; left: 0;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: transparent #fff transparent transparent;
+  transform: rotate(-45deg);
+}
+
+.arc_cover {
+  position: absolute; top: 0; left: 0;
+  width: 60px; height: 60px;
+}
+
+/* ======================================= */
+#listBox{
+  margin-top: 200px;
+  width:100%; height:1000px;
+  overflow: hidden;
+}
+
+.slide_banner{
+  position: relative; z-index:100;
+  width: 100%; height:100%;
+}
+
+.slide_banner:after{
+  content:" "; display:block;
+  position: absolute; top:0; left:0;
+  width:100%; height:100%;
+  z-index:300;
+}
+
+/* ------------------------------ */
+
+.btn{
+  position: absolute; top:50%; left:50%; z-index:1000;
+  transform:translateX(-50%);
+  width:60%; height:0;
+}
+
+.next{float:right; font-size:4rem; transform:translateY(-50%); color:#f5f6f7;}
+.prev{float:left; font-size:4rem; transform:translateY(-50%); color:#f5f6f7;}
+
+/* ------------------------------ */
+
+.slide_banner > ul{
+  position: absolute; top:50%; left:50%; z-index:500;
+  transform:translateX(-50%);
+  width:55%; height:10px;
+  perspective: 50rem; /* 기준치를 주고 자식들을 rotate */
+}
+
+.slide_banner li{
+  position:absolute; z-index:100;
+  top:0; bottom:0; left:0; right:0; margin:auto;
+  width:40%; height:600px;
+  box-shadow: 0.5rem 0.5rem 0.5rem #333;
+  padding-top: 250px; box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.slide_banner li:first-child{
+  z-index:-1;
+  transform:translateX(-100%) rotateY(45deg) scale(0.8);
+}
+
+.slide_banner li:last-child{
+  z-index:-1;
+  transform:translateX(100%) rotateY(-45deg) scale(0.8);
+}
+
+.banner_01{background-image: url(../../img/mini_cooper.jpg);}
+.banner_02{background-image: url(../../img/lotte_aquarium.jpg);}
+.banner_03{background-image: url(../../img/nasa.jpg);}
+
+.slide_banner li a{
+  position: absolute; top:0; left:0;
+}
+
+.slide_banner li p{
+  opacity: 0;
+  position: absolute; top:50%; left:-2rem;
+  width:200%; height:auto;
+  font-size:3rem; font-weight: bold;
+  color:#fff;
+  transition:all 500ms ease;
+}
+
+.slide_banner li.active p {opacity: 1;}
+
+.slide_banner li .con_01{
+  text-transform: uppercase;
+
+}
+
+.slide_banner li .con_02{
+  position: relative; left:50px;
+  font-size:1.5rem;
+  margin-bottom: 2rem;
+}
+
+.slide_banner li .con_02:before{
+  content:" "; position: absolute;
+  top:50%; left:-50px;
+  width:40px; height:0.5rem; background-color: #fff;
+}
+.slide_banner li .con_02:after{
+  content:" "; position: absolute;
+  left:-50px; bottom:-0.5rem; width:80px; height:0.2rem;
+  background-color: #eee;
+}
+
+.slide_banner li .con_03{
+  font-size:1.2rem;
+}
+
+.slide_banner li span{
+  display:block; width:100%; height:auto;
+  text-shadow:0.1rem 0.2rem 0.5rem #333;
+  transform:translateY(1.5rem);
+  transition:all 600ms ease;
+}
+
+.slide_banner li.active span{
+  transform:translateY(0);
+}
+
+  .slide_banner li.active .con_01{transition-delay:0;}
+  .slide_banner li.active .con_02{transition-delay:100ms;}
+  .slide_banner li.active .con_03{transition-delay:200ms;}
+
+.slide_banner li.up span{
+  transform:translateY(-3rem);
+  transition: all 500ms ease-out;
+}
+
+/* ------------------------------ */
+
+.back_img{
+  position: relative; top:-1000px; z-index:50;
+  width:100%; height:100%;
+  filter: blur(2px);
+}
+
+.back_img ul{
+  width:300%; height:100%;
+}
+
+.back_img li{
+  width:33.333333%; height:100%;
+  box-shadow: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.back_img .back_01{background-image: url(../../img/lotte_aquarium.jpg);}
+.back_img .back_02{background-image: url(../../img/nasa.jpg);}
+.back_img .back_03{background-image: url(../../img/mini_cooper.jpg);}
+
+
+
+/* ======================================= */
+#contactBox{
+  position: relative;
+  width:100%; height:1000px;
+}
+
+#contactBox h2{
+  position: absolute; z-index:100;
+  top:50px; left:50px; 
+  width:100%; height:10px;
+  font-size:7rem; 
+  color:#eee;
+  text-shadow: 0.2rem 0.2rem 0.5rem #777;
+}
+
+
+
+
+
+/* ======================================= */
+#footBox{
+  width:100%; height:200px; 
+  padding-top: 50px; box-sizing: border-box;
+  background-color: #333;
+}
+
+#footBox p{
+  width:100%;
+  text-align: center;
+  font-size:1rem;
+  color:#fff;
+  margin-top: 20px;
 }
