@@ -2,8 +2,8 @@
 
 
 #wrap{
-  width:100%; height:auto;
-  min-height: 1500px;
+  width:100%; height: auto; 
+  overflow: hidden;
 }
 
 html {scroll-behavior: smooth;}
@@ -12,7 +12,7 @@ a {display:block; width: 100%; height:100%;}
 
 /* ======================================= */
 #headBox{
-  position:fixed; top:0; left:0; z-index:10000;
+  position:fixed; top:0; left:0; z-index:5000;
   width:100%; height:100px;
   background-color: rgba(255,255,255,0.7);
   box-shadow: 0.1rem 0.3rem 0.4rem rgba(5,5,5,0.5);
@@ -30,6 +30,10 @@ a {display:block; width: 100%; height:100%;}
   float:left; margin-left: 50px;
   line-height: 100px;
   font-size: 1.2rem;
+}
+
+#gnb li a:after{
+  width:90%; height:2px; background-color: #333;
 }
 
 
@@ -91,11 +95,11 @@ a {display:block; width: 100%; height:100%;}
 
 .mouse{
   position: absolute; z-index:100;
-  bottom:0; left:50%; transform: translateX(-50%);
+  bottom:12%; left:50%; transform: translateX(-50%);
   width: 100px; height: 150px;
   background-image: url(../../img/mouse.png);
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 0 0;
   animation:mvScroll 2s infinite ease alternate;
 }
 
@@ -125,7 +129,7 @@ a {display:block; width: 100%; height:100%;}
   position: relative; z-index:50;
   top:15%; left:2%;
   width:40%; height:100px;
-  background-image:linear-gradient(90deg, #3494E6, #EC6EAD);
+  background-image:linear-gradient(90deg, #3494E6, #9585c5);
 }
 
 .info_area{
@@ -204,12 +208,12 @@ a {display:block; width: 100%; height:100%;}
 #skillBox dd > span{display:block; position: absolute; z-index:500;}
 
 .skill_dd_01{left:220px;}
-.skill_dd_02{left:440px;}
-.skill_dd_03{left:656px;}
-.skill_dd_04{left:875px;}
-.skill_dd_05{left:1095px;}
-.skill_dd_06{left:1310px;}
-.skill_dd_07{left:1528px;}
+.skill_dd_02{left:450px;}
+.skill_dd_03{left:685px;}
+.skill_dd_04{left:915px;}
+.skill_dd_05{left:1145px;}
+.skill_dd_06{left:1380px;}
+.skill_dd_07{left:1615px;}
 
 /* ======================================= */
 .circle_01, .circle_02, .circle_03, .circle_04, .circle_05, .circle_06, .circle_07{
@@ -221,7 +225,7 @@ a {display:block; width: 100%; height:100%;}
   width: 140px; height: 140px;
   border-radius: 50%;
   border: 10px solid;
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent #ffd452 transparent transparent;
   transform: rotate(-45deg);
 }
 
@@ -375,32 +379,113 @@ a {display:block; width: 100%; height:100%;}
   background-size: cover;
 }
 
-.back_img .back_01{background-image: url(../../img/lotte_aquarium.jpg);}
-.back_img .back_02{background-image: url(../../img/nasa.jpg);}
-.back_img .back_03{background-image: url(../../img/mini_cooper.jpg);}
+.back_img .back_01{background-image: url(../../img/mini_cooper.jpg);}
+.back_img .back_02{background-image: url(../../img/lotte_aquarium.jpg);}
+.back_img .back_03{background-image: url(../../img/nasa.jpg);}
 
 
 
 /* ======================================= */
-#contactBox{
+#visionBox{
   position: relative;
   width:100%; height:1000px;
+  padding:300px 300px; box-sizing: border-box;
 }
 
-#contactBox h2{
+#visionBox h2{
   position: absolute; z-index:100;
   top:50px; left:50px; 
   width:100%; height:10px;
   font-size:7rem; 
-  color:#eee;
+  color:#fff;
   text-shadow: 0.2rem 0.2rem 0.5rem #777;
 }
 
+.vision_title_box{
+  position: absolute; z-index:50;
+  top:10%; left:5%;
+  width:40%; height:100px;
+  background-image:linear-gradient(90deg, #9585c5, #dc77ab);
+}
 
+.accordian{
+  float:left;
+  width:600px; height:600px;
+  border:2px solid #ccc;
+  padding:50px; box-sizing: border-box;
+}
 
+.accordian > dl{
+  width:100%; height:auto;
+  background-color: #fff;
+  border:2px solid #fff;
+  box-sizing: border-box;
+}
 
+.accordian dt {
+  width:100%; height:50px;
+  border-bottom:1px solid #75f; 
+  
+}
+
+.accordian button{
+  width:100%; height:100%;
+  text-align: left;
+  font-size:1rem;
+}
+
+.accordian dd{
+  display:none;
+  width:100%; height:50px;
+  padding:1rem; box-sizing: border-box;
+}
+
+.sns{
+  float:right;
+  width:600px; height:400px;
+  margin-top: 200px; margin-right: 100px;
+  border:2px solid #ccc;
+}
+
+.sns ul{
+  width:100%; height:100%;
+  padding:100px; box-sizing: border-box;
+}
+
+.sns li{
+  float:left; margin-right: 50px;
+  width:100px; height:100px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.sns li:first-child{background-image: url(../../img/facebook_logo.png);}
+.sns li:last-child{
+  
+  background-image: url(../../img/instagram_logo.png);
+  background-color: #777;
+  background-size: 80%;}
 
 /* ======================================= */
+
+.topMvBtn{
+  position: fixed; right:2%; bottom:2%;
+  z-index: 1000;
+  width: 50px; height: 50px;
+  background-color: #9585c5;
+  background-image: url(../../img/up-arrow.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.topMvBtn > a{
+  display:block; width:100%; height:100%;
+}
+
+/* ======================================= */
+
 #footBox{
   width:100%; height:200px; 
   padding-top: 50px; box-sizing: border-box;

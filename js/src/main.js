@@ -76,5 +76,16 @@
     infoBg.css({'marginTop':ot * 0.5 + 'px'});
   });
 
+  // 스크롤 시 tabBox 고정 및 top 버튼 생성
+
+  var topMvBtn = $('.topMvBtn');
+  var timed = 500;
+
+  $(window).on('scroll', function(){
+  
+  var winScroll = $(window).scrollTop();
+  (winScroll >= 580) ? topMvBtn.stop().fadeIn(timed) : topMvBtn.stop().fadeOut(timed);
+  
+  });
 
 })(jQuery);
