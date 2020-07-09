@@ -38,13 +38,13 @@ a {display:block; width: 100%; height:100%;}
   font-size: 1.2rem;
 }
 
-#gnbBox li.action{
-  font-weight: bold; font-size: 1.5rem;
+#gnb li.action{
+  font-weight: bold;
 }
 
 #gnb li:hover,
 #gnb li:focus{
-  color: # ; text-decoration: underline;
+  color: #425067; 
 }
 
 #unb{

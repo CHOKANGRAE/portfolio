@@ -14,27 +14,34 @@
 		scrollOffset[i] = selEl;
 	}
 	
-	gnbLi.eq(0).addClass('action'); 	gnbLi.eq(0).siblings().removeClass('action');
+  gnbLi.eq(0).addClass('action');
+  gnbLi.eq(0).siblings().removeClass('action');
 	
   $(window).on('scroll', function(){
 		var winScroll = $(window).scrollTop();
 		if(winScroll <= scrollOffset[0]){
-			gnbLi.eq(0).addClass('action');			gnbLi.eq(0).siblings().removeClass('action');
+      gnbLi.eq(0).addClass('action');	
+      gnbLi.eq(0).siblings().removeClass('action');
 
 		}else if(winScroll > scrollOffset[0] && winScroll <= scrollOffset[1]){
-			gnbLi.eq(1).addClass('action');			gnbLi.eq(1).siblings().removeClass('action');
+      gnbLi.eq(1).addClass('action');	
+      gnbLi.eq(1).siblings().removeClass('action');
 
 		}else if(winScroll > scrollOffset[1] && winScroll <= scrollOffset[2]){
-			gnbLi.eq(2).addClass('action');			gnbLi.eq(2).siblings().removeClass('action');
+      gnbLi.eq(2).addClass('action');	
+      gnbLi.eq(2).siblings().removeClass('action');
 
 		}else if(winScroll > scrollOffset[2] && winScroll <= scrollOffset[3]){
-			gnbLi.eq(3).addClass('action');			gnbLi.eq(3).siblings().removeClass('action');
+      gnbLi.eq(3).addClass('action');	
+      gnbLi.eq(3).siblings().removeClass('action');
 
 		}else if(winScroll > scrollOffset[3] && winScroll <= scrollOffset[4]){
-			gnbLi.eq(4).addClass('action');			gnbLi.eq(4).siblings().removeClass('action');
+      gnbLi.eq(4).addClass('action');	
+      gnbLi.eq(4).siblings().removeClass('action');
 
 		}else{
-			gnbLi.eq(5).addClass('action');			gnbLi.eq(5).siblings().removeClass('action');
+      gnbLi.eq(5).addClass('action');	
+      gnbLi.eq(5).siblings().removeClass('action');
 		}
 	});
 
