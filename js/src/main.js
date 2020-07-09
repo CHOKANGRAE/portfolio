@@ -50,7 +50,7 @@
 		var sectionName = $(this).attr('href');
 		var sectionOffset = $(sectionName).offset().top;
 
-		$('html, body').animate({scrollTop: sectionOffset - 80 + 'px'});
+		$('html, body').animate({scrollTop: sectionOffset - 100 + 'px'});
 	});
 
   // viewBox item typing
