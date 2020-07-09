@@ -5,33 +5,29 @@
     // 선택자
       var slideBanner = $('.slide_banner');
       var btn         = $('.btn').find('button');
-      var slideUl     = slideBanner.children('ul');
+      var slideUl     = slideBanner.children('.slideCard');
       var slideLi     = slideUl.find('li');
 
       var backImg     = $('.back_img');
-      
-    // ---------------------------------------
+
+      slideBanner.css({overflow:'hidden'});
+
+    // ---------------------------------------   
+    // 후면 사진 변경
+      var backImg = $('.back_img');
+
+      var backImgUl = backImg.children('ul');
+      var backLi    = backImgUl.find('li');
+
+      backLi.eq(-1).prependTo(backImgUl);
+      var backLi    = backImgUl.find('li');
+
     // 순서 변경, .active삭제 및 재설정
-    slideLi.removeClass('active');
-    slideLi.eq(-1).prependTo(slideUl);
-    slideLi     = slideUl.find('li');
-    slideLi.eq(1).addClass('active');
+      slideLi.removeClass('active');
+      slideLi.eq(-1).prependTo(slideUl);
+      slideLi     = slideUl.find('li');
+      slideLi.eq(1).addClass('active');
 
-    // ---------------------------------------
-    // backImg 순서 변경
-    var timed = 500;
-
-    var backImgUl = backImg.find('ul');
-    var cloneLi   = backImgUl.find('li').eq(-1).clone(true);
-    backImgUl.prepend(cloneLi);
-
-    var backImgLi = backImgUl.children('li');
-    var backImgLiLen  = backImgLi.length;
-
-    backImgUl.css({width:backImgLiLen * 100 + '%', marginLeft: 0, position: 'relative', left: -100 + '%'});
-    backImgLi.width(100 / backImgLiLen + '%');
-
-    var n = 0;
     
     // ---------------------------------------
     // 정면에 보이는 배너순서 찾기(.active 찾기)
@@ -70,14 +66,6 @@
         // 다음버튼 중복기능 방지
         btnTrue = false;
         // 각 내용 위치이동
-
-        n += 1;
-
-		    backImgUl.stop().animate({marginLeft: -n * 100 + '%'}, timed, function(){
-			  if(n >= backImgLiLen - 2){	n = -1;	}
-        backImgUl.css({marginLeft: -n * 100 + '%'});
-        });
-
         slideLi.eq(q-1).css({
           transform:'translate3D(100%, 0, 0) scale(0.8) rotateY(-45deg)',
           transition:'all 500ms linear'
@@ -103,6 +91,13 @@
           slideLi.removeClass('up');
           btnTrue = true;
         }, 500);
+
+        // 배경 이미지 배치
+        backImgUl.stop().animate({marginLeft:-200 + '%'}, function(){
+          backLi.eq(0).appendTo(backImgUl);
+          backLi    = backImgUl.find('li');
+          backImgUl.css({marginLeft:-100 + '%'});
+        });
     
       }else if(btnTrue){
         // prev 버튼 클릭
@@ -125,13 +120,6 @@
             transform:'translate3D(-100%, 0, 0) scale(0.8) rotateY(45deg)',
             transition:'all 500ms linear'
           });
-
-          n -= 1;
-          
-          backImgUl.stop().animate({marginLeft: -n * 100 + '%'}, timed, function(){
-            if(n <= -1){	n = backImgLiLen - 2;	 }
-            backImgUl.css({marginLeft: -n * 100 + '%'});
-          });
           
           setTimeout(function(){
   
@@ -141,6 +129,13 @@
             slideLi.removeClass('up');
             btnTrue = true;
           }, 500);
+
+          // 배경 이미지 배치
+            backImgUl.stop().animate({marginLeft:0}, function(){
+            backLi.eq(-1).prependTo(backImgUl);
+            backLi    = backImgUl.find('li');
+            backImgUl.css({marginLeft:-100 + '%'});
+            });
       }
       
     

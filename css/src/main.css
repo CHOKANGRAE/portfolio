@@ -38,8 +38,13 @@ a {display:block; width: 100%; height:100%;}
   font-size: 1.2rem;
 }
 
-#gnb li a:after{
-  width:90%; height:2px; background-color: #333;
+#gnbBox li.action{
+  font-weight: bold; font-size: 1.5rem;
+}
+
+#gnb li:hover,
+#gnb li:focus{
+  color: # ; text-decoration: underline;
 }
 
 #unb{
@@ -112,7 +117,7 @@ a {display:block; width: 100%; height:100%;}
 
 .mouse{
   position: absolute; z-index:100;
-  bottom:20%; left:50%; transform: translateX(-50%);
+  bottom:12%; left:50%; transform: translateX(-50%);
   width: 100px; height: 150px;
   background-image: url(../../img/mouse.png);
   background-repeat: no-repeat;
@@ -204,6 +209,7 @@ a {display:block; width: 100%; height:100%;}
   position: absolute; top:0; left:0;
   width:100%; height:100%;
   z-index:300;
+  background-color: rgba(0,0,0,0.2);
 }
 
 /* ------------------------------ */
@@ -219,14 +225,14 @@ a {display:block; width: 100%; height:100%;}
 
 /* ------------------------------ */
 
-.slide_banner > ul{
+.slide_banner > .slideCard{
   position: absolute; top:50%; left:50%; z-index:500;
   transform:translateX(-50%);
   width:55%; height:10px;
   perspective: 50rem; /* 기준치를 주고 자식들을 rotate */
 }
 
-.slide_banner li{
+.slideCard li{
   position:absolute; z-index:100;
   top:0; bottom:0; left:0; right:0; margin:auto;
   width:40%; height:600px;
@@ -237,12 +243,12 @@ a {display:block; width: 100%; height:100%;}
   background-size: cover;
 }
 
-.slide_banner li:first-child{
+.slideCard li:first-child{
   z-index:-1;
   transform:translateX(-100%) rotateY(45deg) scale(0.8);
 }
 
-.slide_banner li:last-child{
+.slideCard li:last-child{
   z-index:-1;
   transform:translateX(100%) rotateY(-45deg) scale(0.8);
 }
@@ -251,11 +257,11 @@ a {display:block; width: 100%; height:100%;}
 .banner_02{background-image: url(../../img/lotte_aquarium.jpg);}
 .banner_03{background-image: url(../../img/nasa.jpg);}
 
-.slide_banner li a{
+.slideCard li a{
   position: absolute; top:0; left:0;
 }
 
-.slide_banner li p{
+.slideCard li p{
   opacity: 0;
   position: absolute; top:50%; left:-2rem;
   width:200%; height:auto;
@@ -264,50 +270,50 @@ a {display:block; width: 100%; height:100%;}
   transition:all 500ms ease;
 }
 
-.slide_banner li.active p {opacity: 1;}
+.slideCard li.active p {opacity: 1;}
 
-.slide_banner li .con_01{
+.slideCard li .con_01{
   text-transform: uppercase;
 
 }
 
-.slide_banner li .con_02{
+.slideCard li .con_02{
   position: relative; left:50px;
   font-size:1.5rem;
   margin-bottom: 2rem;
 }
 
-.slide_banner li .con_02:before{
+.slideCard li .con_02:before{
   content:" "; position: absolute;
   top:50%; left:-50px;
   width:40px; height:0.5rem; background-color: #fff;
 }
-.slide_banner li .con_02:after{
+.slideCard li .con_02:after{
   content:" "; position: absolute;
   left:-50px; bottom:-0.5rem; width:80px; height:0.2rem;
   background-color: #eee;
 }
 
-.slide_banner li .con_03{
+.slideCard li .con_03{
   font-size:1.2rem;
 }
 
-.slide_banner li span{
+.slideCard li span{
   display:block; width:100%; height:auto;
   text-shadow:0.1rem 0.2rem 0.5rem #333;
   transform:translateY(1.5rem);
   transition:all 600ms ease;
 }
 
-.slide_banner li.active span{
+.slideCard li.active span{
   transform:translateY(0);
 }
 
-  .slide_banner li.active .con_01{transition-delay:0;}
-  .slide_banner li.active .con_02{transition-delay:100ms;}
-  .slide_banner li.active .con_03{transition-delay:200ms;}
+  .slideCard li.active .con_01{transition-delay:0;}
+  .slideCard li.active .con_02{transition-delay:100ms;}
+  .slideCard li.active .con_03{transition-delay:200ms;}
 
-.slide_banner li.up span{
+.slideCard li.up span{
   transform:translateY(-3rem);
   transition: all 500ms ease-out;
 }
@@ -315,33 +321,33 @@ a {display:block; width: 100%; height:100%;}
 /* ------------------------------ */
 
 .back_img{
-  position: relative; top:-1000px; z-index:50;
+  position: absolute; top:0; left:0; z-index:-1;
   width:100%; height:100%;
-  filter: blur(2px);
+  background-color: #aca;
 }
 
 .back_img ul{
-  width:300%; height:100%;
+  width:300%; height:100%; margin-left: -100%;
+  background-color: #acf;
 }
 
 .back_img li{
-  width:33.333333%; height:100%;
-  box-shadow: none;
+  float:left;
+  width:calc(100% / 3); height:100%;
+  transform : scale (1.1);
+  filter:blur(3px);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 
-.back_img .back_01{background-image: url(../../img/mini_cooper.jpg);}
-.back_img .back_02{background-image: url(../../img/lotte_aquarium.jpg);}
-.back_img .back_03{background-image: url(../../img/nasa.jpg);}
-
-
+.back_01{background-image: url(../../img/mini_cooper.jpg);}
+.back_02{background-image: url(../../img/lotte_aquarium.jpg);}
+.back_03{background-image: url(../../img/nasa.jpg);}
 
 /* ======================================= */
 #visionBox{
   position: relative;
-  margin-top:300px;
   width:100%; height:1000px;
   padding:300px 300px; box-sizing: border-box;
   margin-top: 200px;

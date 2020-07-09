@@ -2,6 +2,50 @@
 
 (function($){
 
+  // gnb li 선택 시 이동
+  var gnb = $('#gnb');
+	var gnbLi = gnb.find('li');
+
+	var scrollOffset = [];
+  var i=0;
+	for(; i < gnbLi.length; i++){
+		var selHref = gnbLi.eq(i).find('a').attr('href');
+		var selEl = $(selHref).offset().top;
+		scrollOffset[i] = selEl;
+	}
+	
+	gnbLi.eq(0).addClass('action'); 	gnbLi.eq(0).siblings().removeClass('action');
+	
+  $(window).on('scroll', function(){
+		var winScroll = $(window).scrollTop();
+		if(winScroll <= scrollOffset[0]){
+			gnbLi.eq(0).addClass('action');			gnbLi.eq(0).siblings().removeClass('action');
+
+		}else if(winScroll > scrollOffset[0] && winScroll <= scrollOffset[1]){
+			gnbLi.eq(1).addClass('action');			gnbLi.eq(1).siblings().removeClass('action');
+
+		}else if(winScroll > scrollOffset[1] && winScroll <= scrollOffset[2]){
+			gnbLi.eq(2).addClass('action');			gnbLi.eq(2).siblings().removeClass('action');
+
+		}else if(winScroll > scrollOffset[2] && winScroll <= scrollOffset[3]){
+			gnbLi.eq(3).addClass('action');			gnbLi.eq(3).siblings().removeClass('action');
+
+		}else if(winScroll > scrollOffset[3] && winScroll <= scrollOffset[4]){
+			gnbLi.eq(4).addClass('action');			gnbLi.eq(4).siblings().removeClass('action');
+
+		}else{
+			gnbLi.eq(5).addClass('action');			gnbLi.eq(5).siblings().removeClass('action');
+		}
+	});
+
+	gnbLi.children('a').on('click', function(e){
+		e.preventDefault();
+		var sectionName = $(this).attr('href');
+		var sectionOffset = $(sectionName).offset().top;
+
+		$('html, body').animate({scrollTop: sectionOffset - 80 + 'px'});
+	});
+
   // viewBox item typing
 
   let viewText
