@@ -2,7 +2,7 @@
 
 
 #wrap{
-  width:100%; height: auto; 
+  width:1920px; height: auto; 
   overflow: hidden;
 }
 
@@ -19,7 +19,8 @@ a {display:block; width: 100%; height:100%;}
 }
 
 #gnb{
-  width:100%; height:100%;
+  float:left;
+  width:60%; height:100%;
 }
 
 #gnb ul{
@@ -34,6 +35,12 @@ a {display:block; width: 100%; height:100%;}
 
 #gnb li a:after{
   width:90%; height:2px; background-color: #333;
+}
+
+#unb{
+  float:right;
+  margin-top: 45px;
+  margin-right: 100px;
 }
 
 
@@ -95,7 +102,7 @@ a {display:block; width: 100%; height:100%;}
 
 .mouse{
   position: absolute; z-index:100;
-  bottom:12%; left:50%; transform: translateX(-50%);
+  bottom:20%; left:50%; transform: translateX(-50%);
   width: 100px; height: 150px;
   background-image: url(../../img/mouse.png);
   background-repeat: no-repeat;
@@ -168,75 +175,11 @@ a {display:block; width: 100%; height:100%;}
   background-color: #425067;
 }
 
-#skillBox ul{
-  width:100%; height:100%;
-  padding:50px; box-sizing: border-box;
-}
-
-#skillBox li{
-  float:left;
-  width:10%; height:160px;
-  margin-left: 50px;
-}
-
-#skillBox li:first-child{margin-left: 100px;
-}
-
-#skillBox dl{
+.paper{
   width:100%; height:100%;
 }
-
-#skillBox dt{
-  width:100%; height:20px;
-  text-align: center;
-  color:#fff;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-#skillBox dd{
-  display:inline-block;
-  width:160px; height:160px; 
-  border-radius: 100%; 
-  border: 10px solid rgba(255,255,255,.3);
-  text-align: center;
-  line-height: 160px;
-  color:#fff;
-  font-size:1.2rem;
-}
-
-#skillBox dd > span{display:block; position: absolute; z-index:500;}
-
-.skill_dd_01{left:220px;}
-.skill_dd_02{left:450px;}
-.skill_dd_03{left:685px;}
-.skill_dd_04{left:915px;}
-.skill_dd_05{left:1145px;}
-.skill_dd_06{left:1380px;}
-.skill_dd_07{left:1615px;}
-
-/* ======================================= */
-.circle_01, .circle_02, .circle_03, .circle_04, .circle_05, .circle_06, .circle_07{
-  position: relative; width: 160px; height: 160px;
-}
-
-.arc_q {
-  position: absolute; top: 0; left: 0;
-  width: 140px; height: 140px;
-  border-radius: 50%;
-  border: 10px solid;
-  border-color: transparent #ffd452 transparent transparent;
-  transform: rotate(-45deg);
-}
-
-.arc_cover {
-  position: absolute; top: 0; left: 0;
-  width: 60px; height: 60px;
-}
-
 /* ======================================= */
 #listBox{
-  margin-top: 200px;
   width:100%; height:1000px;
   overflow: hidden;
 }
@@ -390,6 +333,7 @@ a {display:block; width: 100%; height:100%;}
   position: relative;
   width:100%; height:1000px;
   padding:300px 300px; box-sizing: border-box;
+  margin-top: 200px;
 }
 
 #visionBox h2{
@@ -445,27 +389,28 @@ a {display:block; width: 100%; height:100%;}
   width:600px; height:400px;
   margin-top: 200px; margin-right: 100px;
   border:2px solid #ccc;
+  padding:50px; box-sizing: border-box;
+}
+
+.sns h3{
+  font-size:1.4rem;
 }
 
 .sns ul{
-  width:100%; height:100%;
-  padding:100px; box-sizing: border-box;
+  margin-top: 50px;
+  width:300px; height:150px;
 }
 
 .sns li{
-  float:left; margin-right: 50px;
-  width:100px; height:100px;
+  float:left; margin-right: 20px;
+  width:80px; height:80px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 
 .sns li:first-child{background-image: url(../../img/facebook_logo.png);}
-.sns li:last-child{
-  
-  background-image: url(../../img/instagram_logo.png);
-  background-color: #777;
-  background-size: 80%;}
+.sns li:last-child{background-image: url(../../img/IG.png); background-size: 130%;}
 
 /* ======================================= */
 
