@@ -1,0 +1,42 @@
+/* main_1440.css */
+/* device 환경 min : 1440px, max : 1919px */
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+
+  /* ======================================= */
+  
+  #viewBox{height:55.555555vw;}
+  .mouse{display:none;}
+
+  /* ======================================= */
+
+  #infoBox{height:1300px;}
+  .picture{float:none; margin-left: 0; margin: auto;}
+  .info_txt{float:none; margin:auto; margin-left: 9.765625vw;}
+
+  /* ======================================= */
+
+  #skillBox{height:17.578125vw;}
+
+  /* ======================================= */
+
+  #listBox{height:55.555555vw;}
+
+  .slideCard li{height: 34.722222vw;}
+  .slideCard li p{font-size:2.5rem;}
+
+
+  /* ======================================= */
+
+  #visionBox{height:1500px;}
+  #visionBox h2{top:100px;}
+
+  .accordian{float:none; margin:auto;}
+  .sns{float:none; margin-right: 0; margin:auto;  margin-top: 50px; }
+
+  /* ======================================= */
+
+
+
+
+}

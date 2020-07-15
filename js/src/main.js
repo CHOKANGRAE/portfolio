@@ -124,7 +124,7 @@
     
     var ot= -doScroll/4;
     infoH2.css({'marginTop': ot * 0.7 + 'px'});
-    infoBg.css({'marginTop':ot * 0.5 + 'px'});
+    infoBg.css({'marginTop':ot * 0.7 + 'px'});
   });
 
   // 스크롤 시 tabBox 고정 및 top 버튼 생성

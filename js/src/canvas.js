@@ -7,7 +7,9 @@
   ctx.strokeStyle = baseColor;
   ctx.font = "30px sans-serif";
   ctx.textAlign = 'center';
-  ctx.fillStyle = baseColor;
+	ctx.fillStyle = baseColor;
+	
+	
 
   var MyGraph = function(x, y, p, s){		
 		var posX = x;
@@ -22,7 +24,7 @@
 			animationCircle = function(percent){
 
 				var lineWidth = 15; // 선 두께
-				var r    = 90;     // 반지름
+				var r    = 90     // 반지름
 				var rect = (r + lineWidth) * 2 + 10; //54
 				ctx.lineWidth = lineWidth;
 			
@@ -58,10 +60,10 @@
 	CircleGraph();
 }// MyGraph(x좌표, y좌표, percent, 스킬명);
 
-MyGraph(200, 150, 90, 'PHOTOSHOP');
-MyGraph(450, 150, 80, 'ILLUST');
-MyGraph(700, 150, 95, 'INDESIGN');
-MyGraph(950, 150, 95, 'HTML');
-MyGraph(1200, 150, 80, 'CSS');
-MyGraph(1450, 150, 75, 'JQUERY');
-MyGraph(1700, 150, 90, 'OFFICE');
+MyGraph(200, 160, 90, 'PHOTOSHOP');
+MyGraph(450, 160, 80, 'ILLUST');
+MyGraph(700, 160, 95, 'INDESIGN');
+MyGraph(950, 160, 95, 'HTML');
+MyGraph(1200, 160, 80, 'CSS');
+MyGraph(1450, 160, 75, 'JQUERY');
+MyGraph(1700, 160, 90, 'OFFICE');

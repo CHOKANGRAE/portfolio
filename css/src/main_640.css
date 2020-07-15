@@ -1,0 +1,56 @@
+/* main_640.css */
+/* device 환경 min : 640px, max : 1023px */
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+
+  #gnb li a{font-size: 1rem;}
+  /* ======================================= */
+  
+  #viewBox{height:93.75vw;}
+
+  .view_text{width:400px; right:15%;}
+  .mouse{display:none;}
+
+  /* ======================================= */
+
+  #infoBox{height:1200px; padding:10px; box-sizing: border-box;}
+  #infoBox h2{font-size:5rem;}
+  .info_title_box{width:60%;}
+
+  .info_area{padding-left:10px;}
+
+  .picture{
+    float:none; 
+    margin: auto; margin-left: 90px; 
+    width:400px; height:400px;
+  }
+  .info_txt{float:none; margin:auto; margin-left: 0;}
+
+  /* ======================================= */
+
+  #skillBox{height:800px;}
+  .paper{display: none;}
+
+  /* ======================================= */
+
+  #listBox{height:800px;}
+
+  .btn{width:80%;}
+  .slideCard{width:100%;}
+
+  .slideCard li{width:80%; height: 500px;}
+  .slideCard li p{font-size:2rem;}
+
+
+  /* ======================================= */
+
+  #visionBox{height:1400px; padding-left:10px; box-sizing: border-box;}
+  #visionBox h2{top:100px; font-size:5rem;}
+  .vision_title_box{width:60%;}
+
+  .accordian{float:none; margin:auto;}
+  .sns{float:none; margin-right: 0; margin:auto;  margin-top: 20px; }
+
+  /* ======================================= */
+
+}

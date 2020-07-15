@@ -1,0 +1,9 @@
+/* main_base.css */
+
+@import url("./main.css");
+
+@import url("./main_320.css");
+@import url("./main_640.css");
+@import url("./main_1024.css");
+@import url("./main_1440.css");
+@import url("./main_1920.css");
