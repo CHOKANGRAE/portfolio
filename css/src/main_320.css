@@ -27,8 +27,8 @@
     width:200px; height:200px; 
   }
   .info_txt{float:none; margin:auto; height:auto;}
-  .info_txt h3{margin-top:20px; font-size:0.6rem; }
-  .info_txt p {margin-top:7px;font-size:4pt; margin-left: 5px;}
+  .info_txt h3{margin-top:20px; font-size:0.7rem; }
+  .info_txt p {margin-top:7px;font-size:0.6rem; margin-left: 5px;}
 
   /* ======================================= */
 
@@ -49,12 +49,13 @@
 
   #listBox{height:400px;}
 
-  .btn{width:90%; font-size:1rem;}
+  .btn{width:70%; font-size:1rem; color:#f5f6f7;}
   .slideCard{width:100%;}
 
   .slideCard li{width:80%; height: 300px;}
-  .slideCard li p{font-size:1.2rem;}
-  .con_02{font-size:1rem;}
+  .slideCard li p{font-size:1.2rem; top:60%;}
+  .slideCard li .con_02:before{top:60%;}
+  .slideCard li .con_02{font-size:1rem;}
 
 
   /* ======================================= */
@@ -64,7 +65,7 @@
   .vision_title_box{width:150px; height:50px; top:60px; left:20px;}
 
 
-  .accordian{float:none; width:90%; height:500px; padding:0; margin:auto; font-size:0.7rem;}
+  .accordian{float:none; width:90%; height:500px; padding:10px; margin:auto; font-size:0.7rem;}
   .accordian button{font-size:0.8rem;}
 
   .sns{
