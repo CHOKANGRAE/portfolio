@@ -49,10 +49,10 @@
 
   #listBox{height:400px;}
 
-  .btn{width:90%; color:#f5f6f7;}
+  .btn{width:80%;}
 
-  .next{font-size:2rem;}
-  .prev{font-size:2rem;}
+  .next{font-size:1rem;}
+  .prev{font-size:1rem;}
 
   .slideCard{width:100%;}
 
