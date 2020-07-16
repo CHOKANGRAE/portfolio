@@ -31,18 +31,18 @@
   #skillBox{height:800px;}
   .paper{display:none;}
 
-  .skill_mob{width:600px; height:600px; margin:auto; padding-top: 100px;}
-  .skill_mob ul{width:100%; height:100%; }
-  .skill_mob li{
+  .skill_640{width:600px; height:600px; margin:auto; padding-top: 100px;}
+  .skill_640 ul{width:100%; height:100%; }
+  .skill_640 li{
     width:600px; height:200px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  .skill_mob li:nth-child(1){background-image: url(../../img/skill_design.png);}
-  .skill_mob li:nth-child(2){background-image: url(../../img/skill_web.png); background-position: 80% 50%;}
-  .skill_mob li:nth-child(3){
+  .skill_640 li:nth-child(1){background-image: url(../../img/skill_design.png);}
+  .skill_640 li:nth-child(2){background-image: url(../../img/skill_web.png); background-position: 80% 50%;}
+  .skill_640 li:nth-child(3){
     width:200px;
     background-image: url(../../img/skill_office.png); background-position: 100% 50%; background-size: 85%;}
 

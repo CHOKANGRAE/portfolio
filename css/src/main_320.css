@@ -1,0 +1,78 @@
+/* main_320.css */
+/* device 환경 max : 639px */
+
+@media screen and (max-width: 639px) {
+
+  #headBox{height:50px;}
+  #gnb li{margin-left:10px;}
+  #gnb li a{font-size: 0.5rem; line-height: 50px;}
+  /* ======================================= */
+  
+  #viewBox{height:300px;}
+
+  .view_text{width:400px; right:0; left:35%; font-size:0.8rem;}
+  .mouse{display:none;}
+
+  /* ======================================= */
+
+  #infoBox{height:600px; padding:0; box-sizing: border-box;}
+  #infoBox h2{font-size:2rem; top:50px;}
+  .info_title_box{width:200px; height:50px; top:30px;}
+
+  .info_area{padding:0; margin-top: 50px;}
+
+  .picture{
+    float:none; 
+    margin: auto; 
+    width:200px; height:200px; 
+  }
+  .info_txt{float:none; margin:auto; }
+  .info_txt h3{margin-top:20px; font-size:0.6rem; }
+  .info_txt p {margin-top:7px;font-size:4pt; margin-left: 5px;}
+
+  /* ======================================= */
+
+  #skillBox{height:400px;}
+  .paper{display:none;}
+
+  .skill_320{
+    width:100%; height:100%;
+  }
+
+  /* ======================================= */
+
+  #listBox{height:400px;}
+
+  .btn{width:90%; font-size:1rem;}
+  .slideCard{width:100%;}
+
+  .slideCard li{width:80%; height: 300px;}
+  .slideCard li p{font-size:1.2rem;}
+  .con_02{font-size:1rem;}
+
+
+  /* ======================================= */
+
+  #visionBox{height:1100px; padding:0; padding-top:150px; box-sizing: border-box;}
+  #visionBox h2{top:50px; font-size:2rem; left:20px;}
+  .vision_title_box{width:150px; height:50px; top:60px; left:20px;}
+
+
+  .accordian{float:none; width:90%; height:500px; padding:0; margin:auto; font-size:0.7rem;}
+  .accordian button{font-size:0.8rem;}
+
+  .sns{
+    float:none;
+     width:90%; height:350px; 
+     margin-right: 0; margin:auto; margin-top: 20px;
+    padding:20px; }
+  .sns h3{font-size:1.2rem;}
+  .sns p{font-size:0.9rem;}
+  
+  /* ======================================= */
+
+  .topMvBtn{width:20px; height:20px;}
+  #footBox p{
+    font-size:0.5rem;
+  }
+}
