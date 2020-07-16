@@ -19,25 +19,31 @@
   #infoBox h2{font-size:2rem; top:50px;}
   .info_title_box{width:200px; height:50px; top:30px;}
 
-  .info_area{padding:0; margin-top: 50px;}
+  .info_area{padding:0; margin-top: 50px; height:auto;}
 
   .picture{
     float:none; 
     margin: auto; 
     width:200px; height:200px; 
   }
-  .info_txt{float:none; margin:auto; }
+  .info_txt{float:none; margin:auto; height:auto;}
   .info_txt h3{margin-top:20px; font-size:0.6rem; }
   .info_txt p {margin-top:7px;font-size:4pt; margin-left: 5px;}
 
   /* ======================================= */
 
-  #skillBox{height:400px;}
+  #skillBox{height:156.25vw; background-color: #f5f6f7;}
+  
   .paper{display:none;}
 
   .skill_320{
     width:100%; height:100%;
+    background-image: url(../../img/skill_mob.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
   }
+
 
   /* ======================================= */
 
@@ -68,10 +74,11 @@
     padding:20px; }
   .sns h3{font-size:1.2rem;}
   .sns p{font-size:0.9rem;}
-  
+
   /* ======================================= */
 
-  .topMvBtn{width:20px; height:20px;}
+  .topMvBtn{width:30px; height:30px;}
+
   #footBox p{
     font-size:0.5rem;
   }
