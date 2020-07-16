@@ -49,9 +49,11 @@
 
   #listBox{height:400px;}
 
-  .btn{width:90%; font-size:0.5rem; color:#f5f6f7;}
+  .btn{width:89%; font-size:0.5rem; color:#f5f6f7;}
+
   .next{font-size:2rem;}
   .prev{font-size:2rem;}
+
   .slideCard{width:100%;}
 
   .slideCard li{width:80%; height: 300px;}
