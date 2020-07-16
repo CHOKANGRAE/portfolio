@@ -1,9 +1,0 @@
-/* main_320.css */
-/* device 환경 max : 639px */
-
-@media screen and (max-width: 639px) {
-
-  .mouse{display:none;}
-
-
-}
